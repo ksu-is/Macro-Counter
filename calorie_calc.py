@@ -20,7 +20,7 @@ def user_info():
     return(int(bmr_result))
 
 def calculate_activity(bmr_result): 
-    activity_level = input('What is your activity level (none, light, moderate, heavy, or extreme): ')
+    activity_level = input('What is your activity level (none, light, moderate, or heavy): ')
 
     if activity_level == 'none':
         activity_level = 1.2 * bmr_result
@@ -30,8 +30,6 @@ def calculate_activity(bmr_result):
         activity_level = 1.55 * bmr_result
     elif activity_level == 'heavy':
         activity_level = 1.725 * bmr_result
-    elif activity_level == 'extreme':
-        activity_level = 1.9 * bmr_result
 
     return(int(activity_level))
 
